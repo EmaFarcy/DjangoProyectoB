@@ -1,0 +1,14 @@
+{% extends 'indice/index.html' %}
+
+{% block header_index %}
+{% endblock header_index %}
+
+{% block pruebaTemplate%}
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="subtmit">Enviar</button>
+    </form>
+  
+{% endblock pruebaTemplate %}

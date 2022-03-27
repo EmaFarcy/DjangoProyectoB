@@ -1,0 +1,26 @@
+{% extends 'indice/index.html' %}
+
+{% block header_index %}
+{% endblock header_index %}
+
+{% block pruebaTemplate%}
+
+    <form action={% url 'busqueda_curso' %} method="get">
+        {% csrf_token %}
+
+        <table>
+                {{buscador.as_table}}
+        </table>
+
+        <button type="subtmit">Enviar</button>
+    </form>
+
+    {% for curso in cursos_buscados  %}
+
+            <li>
+                {{curso}}
+            </li>
+    
+    {% endfor %}
+  
+{% endblock pruebaTemplate %}

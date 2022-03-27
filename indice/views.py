@@ -28,7 +28,7 @@ def mi_plantilla(request):
     #template= Template(plantilla.read())
      #context = Context(diccionario_de_datos)
     
-    template= loader.get_template('mi_plantilla.html')
+    template= loader.get_template('indice/mi_plantilla.html')
     
     nombre= 'Jorgelina'
     apellido= 'Atahualpa'
@@ -46,6 +46,6 @@ def mi_plantilla(request):
     #return HttpResponse(plantilla_preparada)
     
     #version con render
-    return render(request, 'mi_plantilla.html', diccionario_de_datos)
+    return render(request, 'indice/mi_plantilla.html', diccionario_de_datos)
 
 

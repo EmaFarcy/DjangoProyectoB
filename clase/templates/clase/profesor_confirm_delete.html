@@ -1,0 +1,16 @@
+{% extends 'indice/index.html' %}
+
+{% block header_index %}       
+{% endblock header_index %}
+
+{% block pruebaTemplate%}
+
+        <form method="post">
+            {% csrf_token %}
+            ¿Desea borrar el elemento?
+            <button type="submit">Confirmar</button>
+
+        </form>
+
+  
+{% endblock pruebaTemplate %}

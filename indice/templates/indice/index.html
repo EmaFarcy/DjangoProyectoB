@@ -20,11 +20,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+                <a class="navbar-brand" href={% url 'inicio' %}>Inicio</a>
+                <a class="navbar-brand" href={% url 'mi_plantilla' %}>Mi Plantilla</a>
+                <a class="navbar-brand" href={% url 'formulario_curso' %}>Formulario</a>
+                <a class="navbar-brand" href={% url 'busqueda_curso' %}>Buscar Curso</a>
+                <a class="navbar-brand" href={% url 'listado_estudiantes' %}>Estudiantes</a>
+                <a class="navbar-brand" href={% url 'profesor_listado' %}>Profesores</a>
+                {% comment %} <a class="btn btn-primary" href="#signup">Sign Up</a> {% endcomment %}
             </div>
         </nav>
         <!-- Masthead-->
+        {% block header_index  %}
         <header class="masthead">
             <div class="container position-relative">
                 <div class="row justify-content-center">
@@ -45,6 +51,10 @@
                 </div>
             </div>
         </header>
+        {% endblock header_index  %}
+
+        {% block pruebaTemplate %}
+        {% endblock pruebaTemplate  %}
 
         <!-- Footer-->
         <footer class="footer bg-light">
